@@ -7,6 +7,13 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   const handleFileUpload = async (e) => {
+
+    setMessage({
+      filename: "",
+      message: "",
+      error: ""
+    });
+    
     const file = e.target.files[0];
 
     if (!file) return;
